@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Play Store App Analytics Dashboard</title>
+    <link rel="stylesheet" href="static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Google Play Store Analytics</h1>
+
+        <!-- Word Cloud: Always visible -->
+        <div class="card" style="--animation-order: 1;">
+            <h2>Word Cloud (Health & Fitness Apps)</h2>
+            <img src="static/wordcloud.png" alt="Word Cloud" class="graph">
+        </div>
+
+        <!-- Choropleth Map: Time-restricted -->
+        <div id="choropleth" class="card" style="--animation-order: 2;">
+            <h2>Choropleth Map (Review Sentiment by Country)</h2>
+            <div class="loading-container">
+                <iframe src="static/choropleth.html" width="100%" height="500"></iframe>
+            </div>
+        </div>
+        <div id="choropleth-msg" class="card" style="display:none; --animation-order: 2;">
+            <h2>Choropleth Map</h2>
+            <p>This visualization is only available between <strong>6 PM and 8 PM IST</strong>.</p>
+        </div>
+
+        <!-- Time Series: Time-restricted -->
+        <div id="timeseries" class="card" style="--animation-order: 3;">
+            <h2>Time Series Analysis (App Reviews Over Time)</h2>
+            <div class="loading-container">
+                <iframe src="static/timeseries.html" width="100%" height="500"></iframe>
+            </div>
+        </div>
+        <div id="timeseries-msg" class="card" style="display:none; --animation-order: 3;">
+            <h2>Time Series Analysis</h2>
+            <p>This visualization is only available between <strong>6 PM and 9 PM IST</strong>.</p>
+        </div>
+    </div>
+
+    <script src="static/script.js"></script>
+</body>
+</html>
